@@ -54,6 +54,8 @@ Create an adapter by passing a valid `PDO` object and table name as constructor 
 **MySQL**
 ```php
 // http://php.net/manual/pl/ref.pdo-mysql.connection.php
+use Integral\Flysystem\Adapter\PDOAdapter;
+use League\Flysystem\Filesystem;
 $pdo = new PDO('mysql:host=hostname;dbname=database_name', 'username', 'password');
 $adapter = new PDOAdapter($pdo, 'files');
 ```
@@ -61,6 +63,8 @@ $adapter = new PDOAdapter($pdo, 'files');
 **SQLite**
 ```php
 // http://php.net/manual/pl/ref.pdo-sqlite.connection.php
+use Integral\Flysystem\Adapter\PDOAdapter;
+use League\Flysystem\Filesystem;
 $pdo = new PDO('sqlite:/absolute/path/to/database.sqlite');
 $adapter = new PDOAdapter($pdo, 'files');
 ```
